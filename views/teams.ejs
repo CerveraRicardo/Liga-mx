@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla del equipo</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <a href="/" class="boton-volver" style="display: inline-block; margin: 20px; text-decoration: none; color: #333; font-weight: bold;">⬅ Volver a Equipos</a>
+    <h1>Plantilla de Jugadores </h1>
+
+    <div class="contenedor">
+        <% if(jugadores && jugadores.length > 0) { %>
+            <% jugadores.forEach(jugador => { %>
+                <% if (jugador.strPlayer && jugador.strPosition) { %>
+                    <div class="tarjeta">
+                        <img src="<%= jugador.strThumb || 'https://via.placeholder.com/200?text=Sin+Foto' %>" alt="Foto"
+                        onerror="this.onerror=null;this.src='https://cdn-icons-png.flaticon.com/512/21/21104.png';">
+                        <h3><%= jugador.strPlayer %></h3>
+                        <p>Posición: <%= jugador.strPosition %></p>
+                        <p>Nacionalidad: <%= jugador.strNationality %></p>
+                    </div>
+                <% } %>
+            <% }) %>
+        <% } else { %>
+            <p>No se encontraron jugadores para este equipo.</p>
+        <% } %>
+    </div>
+</body>
+</html>

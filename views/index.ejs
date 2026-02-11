@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liga MX - Equipos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Equipos de la Liga MX </h1>
+
+    <div class="contenedor">
+        <% if (equipos && equipos.length > 0) { %>
+            <% equipos.forEach(equipo => { %>
+                <a href="/team/<%= equipo.idTeam %>" style="text-decoration: none; color: black;">
+                    <div class="tarjeta">
+                        <img src="<%= equipo.strBadge %>" alt="Escudo de <%= equipo.strTeam %>">
+                        <h3><%= equipo.strTeam %></h3>
+                        <p>Fundado: <strong><%= equipo.intFormedYear || 'N/A' %></strong></p>
+                        <p class="estadio">🏟 <%= equipo.strStadium %></p>
+                    </div>
+                </a>
+            <% }) %>
+        <% } else { %>
+            <p>No se encontraron equipos.</p>
+        <% } %>
+    </div>
+</body>
+</html>

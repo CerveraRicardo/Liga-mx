@@ -18,6 +18,18 @@ This project uses a **free tier API** from *TheSportsDB*. Please be aware of the
 2. **Incomplete Squads:** Squad lists are maintained by the community and might not reflect the very latest transfers.
 3. **Fallback System:** I implemented a custom "image fallback" logic using JavaScript's `onerror` event to ensure the app always displays a professional placeholder icon instead of a broken image link.
 
+## 📸 Project Preview
+
+### Main Dashboard (Teams)
+The home page displays all Mexican Primera Division clubs with high-quality badges and stadium details.
+![Main Dashboard](<img width="1261" height="688" alt="Screenshot 2026-02-11 at 1 45 53 a m" src="https://github.com/user-attachments/assets/d79a2216-113e-44b3-96f0-af490eef2bfc" />
+)
+
+### Squad View (Players)
+By clicking on any team, you access the full squad roster. I implemented a silhouette fallback for players without an official photo to maintain a consistent UI.
+![Squad View](<img width="1256" height="687" alt="Screenshot 2026-02-11 at 1 46 00 a m" src="https://github.com/user-attachments/assets/a3abed48-1a3f-44fa-9d7e-0c09c2d1db2d" />
+)
+
 ## 
 How to Run
 1. Clone this repository.
